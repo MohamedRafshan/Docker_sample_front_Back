@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-container
+    ports:
+      - "27017:27017"
+  server:
+    build: .
+    container_name: node-server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo-container:27017/employees
