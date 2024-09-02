@@ -30,7 +30,7 @@ const Page = () => {
 
 
   return (
-    <div>common raf LogIn</div>
+    <div>common raf LogIn suc</div>
   )
 }
 
